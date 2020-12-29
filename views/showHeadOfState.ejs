@@ -1,0 +1,24 @@
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+</style>
+
+<table>
+  <h1>Heads Of State</h1>
+  <input type="submit" value="Add Head of State" onclick="location.href='/addHeadOfState'">
+  <br> </br>
+  <tr>
+    <th>Country Code</th>
+    <th>Head of State</th>
+  </tr>
+  <% headsOfStates.forEach((headsOfState) => { %>
+  <tr>
+    <td><%= headsOfState._id %></td>
+    <td><%= headsOfState.headOfState %></td>
+  </tr>
+  <% }) %>
+</table>
+<p><a href="/">Home</a></p>
